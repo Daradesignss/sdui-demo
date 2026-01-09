@@ -1,2 +1,44 @@
-# sdui-demo
- “Server-driven UI demo with React + GraphQL”
+# Mini Server-Driven UI (SDUI) Demo — React + GraphQL
+
+This is a small demo that shows **Server-Driven UI (SDUI)**:
+the server returns a **UI schema** (JSON) over **GraphQL**, and the React client renders
+the UI dynamically using a **component registry** + **recursive renderer**.
+
+# What this proves
+- Separation of **data/config** from **presentation**
+- A simple **SDUI renderer** (schema to components)
+- “Platform-first” thinking (same schema could be rendered by web/mobile clients)
+
+## Tech Stack
+- React (Vite)
+- Apollo Client (frontend GraphQL)
+- Apollo Server (mock GraphQL backend)
+
+## How it works 
+1. React queries the GraphQL server for `screenConfig(screenId)`
+2. Server returns a JSON schema like:
+
+```json
+{
+  "type": "Screen",
+  "children": [
+    { "type": "Text", "props": { "value": "Welcome" } },
+    { "type": "Spacer", "props": { "height": 16 } },
+    { "type": "Button", "props": { "label": "Sign In" } }
+  ]
+}
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+# Expanding the ESLint configuration
+
+If you are developing a production application, I recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
