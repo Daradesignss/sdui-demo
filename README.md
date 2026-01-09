@@ -36,6 +36,26 @@ the UI dynamically using a **component registry** + **recursive renderer**.
   ]
 }
 
+Clone:
+git clone <repo-url>
+cd sdui-demo
+
+Install dependencies:
+npm install
+
+Start the GraphQL server (Terminal 1):
+node server/index.js
+
+Start the React app (Terminal 2):
+npm run dev
+
+Open:
+React UI: http://localhost:5173
+GraphQL: http://localhost:4000
+
+Enjoy!!!
+
+## Additional Info
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
