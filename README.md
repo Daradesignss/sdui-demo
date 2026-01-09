@@ -9,6 +9,11 @@ the UI dynamically using a **component registry** + **recursive renderer**.
 - A simple **SDUI renderer** (schema to components)
 - “Platform-first” thinking (same schema could be rendered by web/mobile clients)
 
+## Highlights
+- Schema-driven rendering via a component registry
+- Graceful fallback for unknown component types
+- Easy to extend with new UI types (e.g., Spacer)
+
 ## Tech Stack
 - React (Vite)
 - Apollo Client (frontend GraphQL)
@@ -27,6 +32,9 @@ the UI dynamically using a **component registry** + **recursive renderer**.
     { "type": "Button", "props": { "label": "Sign In" } }
   ]
 }
+
+## Demo
+![SDUI Demo](assets/demo.png)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
