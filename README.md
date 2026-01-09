@@ -4,6 +4,9 @@ This is a small demo that shows **Server-Driven UI (SDUI)**:
 the server returns a **UI schema** (JSON) over **GraphQL**, and the React client renders
 the UI dynamically using a **component registry** + **recursive renderer**.
 
+## Demo
+![SDUI Demo](assets/demo.png)
+
 # What this proves
 - Separation of **data/config** from **presentation**
 - A simple **SDUI renderer** (schema to components)
@@ -32,9 +35,6 @@ the UI dynamically using a **component registry** + **recursive renderer**.
     { "type": "Button", "props": { "label": "Sign In" } }
   ]
 }
-
-## Demo
-![SDUI Demo](assets/demo.png)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
